@@ -5,7 +5,6 @@ import requests
 import hashlib
 from github import Github
 
-print(sys.version)
 
 def get_github_latest_release():
     g = Github()
@@ -176,7 +175,5 @@ def verify_checksum(checksum_file: str):
             get_github_latest_release()
             break
 
-
-print(sys.version)
 
 get_github_latest_release()
