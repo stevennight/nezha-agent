@@ -2,7 +2,7 @@ name: Sync Code to Gitee
 
 on:
   push:
-    branches: [main]
+    branches: [v0-final]
 
 jobs:
   sync-code-to-gitee:
