@@ -86,7 +86,7 @@ def sync_to_gitee(tag: str, body: str, files: slice):
         'name': tag,
         'body': body,
         'prerelease': False,
-        'target_commitish': 'main'
+        'target_commitish': 'v0-final'
     }
     while True:
         try:
