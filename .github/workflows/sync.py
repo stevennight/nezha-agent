@@ -176,6 +176,7 @@ def verify_checksum(checksum_file: str):
             get_github_latest_release()
             break
 
+
 print(sys.version)
 
 get_github_latest_release()
