@@ -196,6 +196,7 @@ func persistPreRun(cmd *cobra.Command, args []string) {
 func preRun(cmd *cobra.Command, args []string) {
 	// 来自于 GoReleaser 的版本号
 	monitor.Version = version
+	fmt.Println(version)
 
 	if agentCliParam.Version {
 		fmt.Println(version)
