@@ -16,6 +16,20 @@ Agent of Nezha Monitoring
 <a href="https://github.com/liuran001" title="Chisato22"><img src="https://avatars.githubusercontent.com/u/32791471?v=4" width="50;" alt="Chisato22"/></a><!--GAMFC_DELIMITER_END-->
 
 
+# Actions编译
+通过github actions进行构建。
+
+## 触发构建
+
+```bash
+# 替换版本号
+git tag vx.x.x
+git push --tags
+```
+
+## 完成构建
+构建完成后，仓库的release会有最新的版本。
+
 # Go 编译
 
 ## 安装Go Releaser
