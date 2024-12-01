@@ -8,7 +8,9 @@ from github import Github
 
 def get_github_latest_release():
     g = Github()
-    repo = g.get_repo("stevennight/nezha-agent")
+    gh_owner = os.environ['GH_OWNER']
+    gh_repo = os.environ['GH_REPO']
+    repo = g.get_repo(gh_repo)
     release = repo.get_latest_release()
     if release:
         print(f"Latest release tag is: {release.tag_name}")
@@ -70,8 +72,9 @@ def delete_gitee_releases(latest_id, client, uri, token):
 
 def sync_to_gitee(tag: str, body: str, files: slice):
     release_id = ""
-    owner = "StevenNight"
-    repo = "nezha-agent"
+    owner = os.environ['GITEE_OWNER']
+    repo = os.environ['GITEE_REPO']
+    branch = os.environ['GITEE_BRANCH']
     release_api_uri = f"https://gitee.com/api/v5/repos/{owner}/{repo}/releases"
     api_client = requests.Session()
     api_client.headers.update({
@@ -86,7 +89,7 @@ def sync_to_gitee(tag: str, body: str, files: slice):
         'name': tag,
         'body': body,
         'prerelease': False,
-        'target_commitish': 'v0-final'
+        'target_commitish': branch
     }
     while True:
         try:

@@ -9,6 +9,11 @@ jobs:
     timeout-minutes: 30
     env:
       GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+      GITEE_OWNER: ${{ secrets.GITEE_OWNER }}
+      GITEE_REPO: ${{ secrets.GITEE_REPO }}
+      GITEE_BRANCH: ${{ secrets.GITEE_BRANCH }}
+      GH_OWNER: ${{ github.repository_owner }}
+      GH_REPO: ${{ github.repository }}
     steps:
       - uses: actions/checkout@v4
       - name: Sync to Gitee
