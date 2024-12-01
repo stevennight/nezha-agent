@@ -30,7 +30,7 @@ git push --tags
 ## 完成构建
 构建完成后，仓库的release会有最新的版本。
 
-# Go 编译
+# 本地编译
 
 ## 安装Go Releaser
 https://goreleaser.com/install/
