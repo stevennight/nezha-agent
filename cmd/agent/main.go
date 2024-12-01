@@ -61,7 +61,7 @@ type AgentCliParam struct {
 }
 
 var (
-	version     string
+	version     = monitor.Version
 	arch        string
 	client      pb.NezhaServiceClient
 	initialized bool
@@ -195,8 +195,7 @@ func persistPreRun(cmd *cobra.Command, args []string) {
 
 func preRun(cmd *cobra.Command, args []string) {
 	// 来自于 GoReleaser 的版本号
-	// monitor.Version = version
-	fmt.Println(monitor.Version)
+// 	monitor.Version = version
 
 	if agentCliParam.Version {
 		fmt.Println(version)
