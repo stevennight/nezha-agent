@@ -82,6 +82,10 @@ def sync_to_gitee(tag: str, body: str, files: slice):
         'Content-Type': 'application/json'
     })
 
+    print(owner)
+    print(repo)
+    print(branch)
+
     access_token = os.environ['GITEE_TOKEN']
     release_data = {
         'access_token': access_token,
