@@ -4,6 +4,7 @@ import requests
 import hashlib
 from github import Github
 
+print(sys.version)
 
 def get_github_latest_release():
     g = Github()
