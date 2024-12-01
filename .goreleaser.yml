@@ -31,3 +31,10 @@ builds:
     binary: nezha-agent
 snapshot:
   version_template: "nezha-agent"
+archives:
+  - id: zip
+    format: zip
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+#archives:
+#  - format: zip
+#    name_template: {{ .ProjectName }}_{{ .Os }}_{{ .Arch }}
